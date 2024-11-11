@@ -12,9 +12,14 @@ Organizes imports and formats code in all files within a directory and its subdi
 
 ### How to use
 
+#### Organize from folder
+
 1. Right-click on a folder;
 2. Select the `📑 Organize imports and format files here` option.
 
-### Example
-
 <img src="./doc/img-1.png" alt="Instructions image" width="450"/>
+
+#### Organize import and format of git changed files
+
+1. Open command palette
+2. Search of "Format files from git changes"

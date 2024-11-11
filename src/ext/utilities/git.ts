@@ -26,6 +26,11 @@ export class Git {
     return ignored;
   }
 
+  public async getGitChangedFiles(): Promise<string[]> {
+    const changes = await this._git?.repositories[0].diffWithHEAD();
+    return changes?.map((change) => change.uri.fsPath) ?? [];
+  }
+
   private executeGit(options: { cwd: string; args: string[] }): string {
     return execFileSync(this._gitexe, options.args, { cwd: options.cwd, encoding: 'utf8' });
   }
